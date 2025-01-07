@@ -2,18 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.turing.javase6.chapter3;
+package com.turing.javase6.chapter4;
 
 /**
  *
  * @author macbook
  */
-public class StringDemo {
+public class BitwiseDemo {
     public static void main(String[] args) {
+        int a= 2;
+        int b = 3;
         
-        String data ="Hello \"hi\"";
-        
-        System.out.println("Data "+data);
-        System.out.println("Data uppercase "+data.toUpperCase());
+        System.out.println("A "+Integer.toBinaryString(a));
+        System.out.println("B "+Integer.toBinaryString(b));
+        System.out.println("A & B "+Integer.toBinaryString(a & b));
     }
 }

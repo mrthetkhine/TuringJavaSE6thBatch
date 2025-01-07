@@ -8,12 +8,13 @@ package com.turing.javase6.chapter3;
  *
  * @author macbook
  */
-public class StringDemo {
+public class TypeInference {
     public static void main(String[] args) {
+        int a = 10;
+        var b = 20;
         
-        String data ="Hello \"hi\"";
-        
-        System.out.println("Data "+data);
-        System.out.println("Data uppercase "+data.toUpperCase());
+        //b = false;
+        var c = "Hello";
+        var k = a + 2;
     }
 }

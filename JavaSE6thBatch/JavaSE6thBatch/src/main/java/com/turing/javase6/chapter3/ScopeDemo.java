@@ -8,12 +8,16 @@ package com.turing.javase6.chapter3;
  *
  * @author macbook
  */
-public class StringDemo {
+public class ScopeDemo {
     public static void main(String[] args) {
-        
-        String data ="Hello \"hi\"";
-        
-        System.out.println("Data "+data);
-        System.out.println("Data uppercase "+data.toUpperCase());
+        int c = 10;
+        {
+            //int c = 20;
+            int a = 10;
+            System.out.println("A is "+a);
+        }
+        String a= "Hello";
+        System.out.println("C is "+c);
+        System.out.println("A "+a);
     }
 }
