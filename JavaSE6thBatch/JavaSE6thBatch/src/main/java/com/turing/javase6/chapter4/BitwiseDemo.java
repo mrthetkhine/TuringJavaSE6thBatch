@@ -16,5 +16,8 @@ public class BitwiseDemo {
         System.out.println("A "+Integer.toBinaryString(a));
         System.out.println("B "+Integer.toBinaryString(b));
         System.out.println("A & B "+Integer.toBinaryString(a & b));
+        System.out.println("A | B "+Integer.toBinaryString(a | b));
+        System.out.println("A ^ B "+Integer.toBinaryString(a ^ b));
+        System.out.println("~A "+Integer.toBinaryString(~a));
     }
 }
