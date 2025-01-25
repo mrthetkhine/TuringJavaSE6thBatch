@@ -18,9 +18,20 @@ public class Factorial {
         }
         return result;
     }
+    int factRec(int n)
+    {
+        if(n==0)
+        {
+            return 1;
+        }
+        else
+        {
+            return n* factRec(n-1);
+        }
+    }
     public static void main(String[] args) {
         Factorial fact = new Factorial();
-        System.out.println("Fact 3 "+fact.factorial(3));
-        System.out.println("Fact 4 "+fact.factorial(4));
+        System.out.println("Fact 3 "+fact.factRec(5));
+        System.out.println("Fact 4 "+fact.factRec(4));
     }
 }

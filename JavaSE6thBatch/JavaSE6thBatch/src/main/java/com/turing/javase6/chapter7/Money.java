@@ -9,7 +9,7 @@ package com.turing.javase6.chapter7;
  * @author macbook
  */
 public class Money {
-    int amount;
+    private int amount;
     
     Money()
     {
