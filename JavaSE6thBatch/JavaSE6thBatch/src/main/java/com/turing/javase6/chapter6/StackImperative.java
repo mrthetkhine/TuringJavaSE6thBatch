@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.turing.javase6.chapter6;
-
+import com.turing.javase6.chapter8.Data;
 /**
  *
  * @author macbook
@@ -33,5 +33,7 @@ public class StackImperative {
         
         top2 = push(stack2,top,20);
         
+        Data data =new Data();
+        //data.value ++;
     }
 }

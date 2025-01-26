@@ -4,6 +4,8 @@
  */
 package com.turing.javase6.chapter7;
 
+import com.turing.javase6.chapter8.Parent;
+
 /**
  *
  * @author macbook
@@ -18,5 +20,7 @@ public class Wrapper {
         Integer c = 400;
         Integer d= 400;
         System.out.println("C== d "+(c==d));
+        Parent parent = new Parent();
+        //parent.data ++;
     }
 }
