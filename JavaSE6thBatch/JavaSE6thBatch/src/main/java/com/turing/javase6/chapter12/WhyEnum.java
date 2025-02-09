@@ -20,5 +20,8 @@ public class WhyEnum {
         
         System.out.println("Gender "+gender);
         gender = 100;
+        
+        
+        
     }
 }
