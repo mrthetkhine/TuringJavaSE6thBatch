@@ -1,0 +1,22 @@
+<htlm>
+    <script>
+        function hello()
+        {
+            console.log('Hello');
+        }
+        let fun = hello;//1st 
+        fun();
+
+        function getFun()//rule 2
+        {
+            return hello;
+        }
+        getFun()();
+
+        function accept(fn)
+        {
+            fn();
+        }
+        accept(hello);
+    </script>
+</htlm>
