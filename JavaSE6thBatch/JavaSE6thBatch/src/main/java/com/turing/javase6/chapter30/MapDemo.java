@@ -6,6 +6,7 @@ package com.turing.javase6.chapter30;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
@@ -13,23 +14,15 @@ import java.util.stream.Stream;
  *
  * @author macbook
  */
-public class StreamDemo {
+public class MapDemo {
     public static void main(String[] args) {
         Integer arr[] = {1,2,3,4,5};
         Stream<Integer> stream = Arrays.stream(arr);
         
-        Predicate<Integer> isEven= (n)->n%2==0;
-        Stream<Integer> result = stream.filter(isEven);
+        Function<Integer,Integer> toDouble= n-> n* 2;
+        Stream<Integer> result = stream.map(toDouble);
         
         result.forEach(System.out::println);
-        
-        ArrayList<Integer> result2 = new ArrayList<>();
-        for(Integer item : arr)
-        {
-            if(isEven.test(item))
-            {
-                result2.add(item);
-            }
-        }
+       
     }
 }
