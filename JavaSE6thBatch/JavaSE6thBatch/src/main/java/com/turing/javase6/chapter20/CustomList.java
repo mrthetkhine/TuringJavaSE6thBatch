@@ -51,7 +51,7 @@ public class CustomList {
         list.add(new Human("Naing Aung ",35));
         
         Collections.sort(list);
-        Collections.reverse(list);
+        //Collections.reverse(list);
         
         for(Human h : list)
         {
