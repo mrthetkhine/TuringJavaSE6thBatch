@@ -1,0 +1,23 @@
+CREATE TABLE `javase6_sql`.`items` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `item` VARCHAR(100) NULL,
+  `price` INT NULL,
+  `quantity` INT NULL,
+  PRIMARY KEY (`id`));
+
+CRUD
+C Create 
+R Read 
+U Update
+D Delete
+
+SELECT * FROM items;
+
+SELECT ID,item FROM items;
+SELECT *,price*quantity AS total FROM javase6_sql.items;
+
+SELECT *,price*quantity AS total FROM javase6_sql.items
+WHERE condition;
+
+SELECT * FROM items
+WHERE quantity>=10;
