@@ -21,3 +21,122 @@ WHERE condition;
 
 SELECT * FROM items
 WHERE quantity>=10;
+
+SELECT * FROM movie
+where Genre IS NULL;
+
+SELECT * FROM movie
+where Genre IS NOT NULL;
+
+SELECT * FROM movie
+where title ='Avata'
+
+SELECT * FROM movie
+where title LIKE 'Avata%'
+
+SELECT * FROM movie
+where title LIKE '%Avata%'
+
+----
+SELECT * FROM TABLE
+[WHERE]
+[ORDER]
+
+SELECT * FROM javase6_sql.movie
+ORDER BY title;
+
+SELECT * FROM javase6_sql.movie
+ORDER BY title DESC;
+
+SELECT * FROM javase6_sql.movie
+WHERE year >= 2010
+ORDER BY year;
+
+--GROUP BY -----
+SELECT GENRE,COUNT(*) FROM javase6_sql.movie
+GROUP BY Genre;
+
+SELECT * FROM TABLE
+[WHERE]
+[ORDER]
+[GROUP BY]
+
+SELECT movie_id,AVG(rating) FROM javase6_sql.rating
+GROUP By movie_id;
+
+SELECT GENRE,COUNT(*) FROM javase6_sql.movie
+GROUP BY Genre
+HAVING COUNT(*)>=3;
+
+SELECT movie_id,AVG(rating) FROM javase6_sql.rating
+GROUP By movie_id
+HAVING AVG(Rating)>3
+
+SELECT * FROM javase6_sql.movie
+LIMIT 5;
+
+SELECT * FROM javase6_sql.movie
+LIMIT 5,6;
+
+INSERT INTO table_name
+VALUES (columns,,)
+
+INSERT INTO items(item,price,quantity)
+VALUES ('Bread',200,10)
+
+truncate table movie;
+
+INSERT INTO javase6_sql.movie
+SELECT * FROM javase_5th.movie;
+
+DELETE FROM movie;
+
+DELETE FROM items
+WHERE id = 5;
+
+UPDATE table_name
+set col_name=value, col_name=value;
+
+UPDATE items
+SET price =price-50
+WHERE id = 6;
+
+UPDATE items
+SET price =price-50,quantity=quantity+1
+WHERE id = 6;
+
+INNER JOIN 
+
+SELECT *
+FROM movie_actor 
+INNER JOIN movie
+INNER JOIN actor
+ON movie_actor.movie_id = movie.id
+AND movie_actor.actor_id=actor.id
+
+SELECT * FROM javase6_sql.movie
+INNER JOIN movie_details
+ON movie.id=movie_details.id
+
+SELECT * FROM javase6_sql.movie
+LEFT JOIN movie_details
+ON movie.id=movie_details.id
+
+SELECT * FROM javase6_sql.movie_details
+RIGHT JOIN movie
+ON movie.id=movie_details.id
+
+SELECT * FROM javase6_sql.actor
+UNION
+SELECT id,name,gender,now() FROM director;
+
+
+SELECT * FROM 
+movie,movie_details
+WHERE movie.id =movie_details.movie_id;
+
+//self join
+SELECT *
+FROM employee AS emp1
+JOIN employee AS emp2
+ON emp2.supervisor = emp1.id;
