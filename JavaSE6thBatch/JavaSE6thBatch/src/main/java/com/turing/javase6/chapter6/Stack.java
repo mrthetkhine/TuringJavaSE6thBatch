@@ -12,13 +12,17 @@ public class Stack {
     int top = -1;
     int[] items = new int[10];
     
-    void push(int item)
+    public void push(int item)
     {
         this.items[++this.top] = item;
     }
-    int pop()
+    public int pop()
     {
         return this.items[this.top--];
+    }
+    public int size()
+    {
+        return this.top+1;
     }
     public static void main(String[] args) {
         Stack stack1 = new Stack();
